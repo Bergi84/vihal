@@ -1,5 +1,5 @@
 __stack = ORIGIN(RAM) + LENGTH(RAM);
-__Main_Stack_Size = 1024 ;
+__Main_Stack_Size = DEFINED(STACK_SIZE) ? STACK_SIZE : 1024 ;
 
 PROVIDE ( _Main_Stack_Size = __Main_Stack_Size ) ;
 __Main_Stack_Limit = __stack  - __Main_Stack_Size ;
