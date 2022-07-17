@@ -263,7 +263,7 @@ bool THwIntFlash_stm32::CmdFinished()
 	return true;
 }
 
-#if defined(MCUSF_G4)
+#if defined(MCUSF_G4) || defined(MCUSF_WB)
 
 void THwIntFlash_stm32::CmdEraseBlock()
 {
